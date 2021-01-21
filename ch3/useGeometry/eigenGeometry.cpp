@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
   // 用变换矩阵进行坐标变换
   Vector3d v_transformed = T * v;                              // 相当于R*v+t
   cout << "v tranformed = " << v_transformed.transpose() << endl;
-
+  
   // 对于仿射和射影变换，使用 Eigen::Affine3d 和 Eigen::Projective3d 即可，略
 
   // 四元数

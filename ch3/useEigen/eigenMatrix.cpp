@@ -64,7 +64,7 @@ int main(int argc, char **argv) {
   // 同样你不能搞错矩阵的维度
   // 试着取消下面的注释，看看Eigen会报什么错
   // Eigen::Matrix<double, 2, 3> result_wrong_dimension = matrix_23.cast<double>() * v_3d;
-
+  //
   // 一些矩阵运算
   // 四则运算就不演示了，直接用+-*/即可。
   matrix_33 = Matrix3d::Random();      // 随机数矩阵
@@ -98,7 +98,7 @@ int main(int argc, char **argv) {
   cout << "time of normal inverse is "
        << 1000 * (clock() - time_stt) / (double) CLOCKS_PER_SEC << "ms" << endl;
   cout << "x = " << x.transpose() << endl;
-
+  
   // 通常用矩阵分解来求，例如QR分解，速度会快很多
   time_stt = clock();
   x = matrix_NN.colPivHouseholderQr().solve(v_Nd);
